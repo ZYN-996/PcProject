@@ -19,6 +19,9 @@ li {
 a {
     text-decoration: none;
 }
+input {
+    outline: none;
+}
 
 .clearfix:before,
 .clearfix:after {
@@ -88,6 +91,7 @@ a {
     color: #bfbfbf;
     font-size: 14px;
     padding-left: 15px;
+    border-radius: 5px 0 0 5px;
 }
 
 .search button {
@@ -97,6 +101,7 @@ a {
     /* 按钮button默认有个边框需要我们手动去掉 */
     border: 0;
     background: url(images/btn.png);
+    border-radius: 0 5px 5px 0;
 }
 
 .user {
@@ -106,16 +111,21 @@ a {
     font-size: 14px;
     color: #666;
 }
+.user img{
+    width: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
 
 /* banner区域 */
 .banner {
     height: 421px;
-    background-color: #1c036c;
+    background-color: #b8dcfe;
 }
 
 .banner .w {
     height: 421px;
-    background: url(images/banner2.png) no-repeat top center;
+    background: url(images/banner.jpg) no-repeat top center;
 }
 
 .subnav {
@@ -147,6 +157,7 @@ a {
 .course {
     float: right;
     width: 230px;
+    border-radius: 5px;
     height: 300px;
     background-color: #fff;
     /* 浮动的盒子不会有外边距合并的问题 */
@@ -158,6 +169,7 @@ a {
     background-color: #9bceea;
     text-align: center;
     line-height: 48px;
+    border-radius:5px 5px 0 0 ;
     font-size: 18px;
     color: #fff;
 }
@@ -185,6 +197,7 @@ a {
     display: block;
     height: 38px;
     border: 1px solid #00a4ff;
+    border-radius: 5px;
     margin-top: 5px;
     text-align: center;
     line-height: 38px;
@@ -293,7 +306,7 @@ a {
 
 /* footer 模块 */
 .footer {
-    height: 415px;
+    height: 250px;
     background-color: #fff;
 }
 
@@ -316,6 +329,7 @@ a {
     width: 118px;
     height: 33px;
     border: 1px solid #00a4ff;
+    border-radius: 5px;
     text-align: center;
     line-height: 33px;
     color: #00a4ff;
@@ -324,6 +338,7 @@ a {
 
 .links {
     float: right;
+    margin-right: 20px;
 }
 
 .links dl {

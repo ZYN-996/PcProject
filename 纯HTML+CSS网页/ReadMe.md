@@ -2,7 +2,7 @@
 
 **结构图如下：**
 
-![image-20220725204522940](https://could-img.oss-cn-hangzhou.aliyuncs.com/202207252045086.png)
+![image-20220819164002346](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208191640654.png)
 
 - 1号是版心盒子 **header**  1200 *  42 的盒子水平居中对齐, 上下给一个margin值就好了。
 - 版心盒子 里面包含 2号盒子 **logo** 图标
@@ -39,7 +39,9 @@
 
 结构图如下：
 
-![image-20220816204755583](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208162048037.png)
+![image-20220819164239866](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208191642661.png)
+
+![image-20220819164224042](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208191642264.png)
 
 - 1号盒子是通栏的大盒子**banner**， 不给宽度，给高度，给一个蓝色背景。
 - 2号盒子是版心 **w**， 要水平居中对齐。
@@ -48,7 +50,7 @@
 
 ##### 2.1、subnav 侧导航栏 (左侧的)
 
-![1571314874385](https://img-blog.csdnimg.cn/img_convert/f0034e9ac466cdd9c3e5b494a38c08d2.png)   
+![image-20220819164257467](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208191642429.png)   
 
 - subnav 盒子 背景色 黑色半透明
 - 重要的导航栏，li 包 a ，行高45px
@@ -61,7 +63,7 @@
 
 结构图如下：
 
-![1571314874385](https://img-blog.csdnimg.cn/img_convert/f0034e9ac466cdd9c3e5b494a38c08d2.png)
+![image-20220819164558004](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208191645884.png)
 
 - 1号盒子 是  228 * 300 的盒子 右浮动  **注意 浮动的元素 不会有外边距塌陷的问题**
 - 1号盒子内 分为 上下 两个 子盒子
@@ -72,11 +74,9 @@
 
 结构图如下：
 
-![image-20220816213310531](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208162133628.png)
+![image-20220819164413936](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208191644768.png)
 
-- **复习点：**  因为里面三个盒子都要垂直居中，我们利用 继承性，给 最大的盒子 一个垂直居中的代码就好了，还记得 那些 样式可以继承吗？？？ font-  line-  text- color
-
-  
+- 因为里面三个盒子都要垂直居中，利用 继承性，给最大的盒子 一个垂直居中的代码就好了
 
 - 大盒子水平居中 goods  精品 ，注意此处有个盒子阴影
 
@@ -90,19 +90,19 @@
 
 结构图如下：
 
-![](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208162135108.png)
+![image-20220819164714279](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208191647324.png)
 
 - 1号盒子为最大的盒子 **box**  版心水平居中对齐
 - 2号盒子为上面部分 **box-hd**  -- 里面   左侧标题H3 左浮动   右侧 链接 a 右浮动
 - 3号盒子为底下部分 **box-bd** --- 里面是无序列表 有 10个 小li 组成
 - 小li 外边距的问题， 这里有个小技巧。  给box-hd 宽度为 1215 就可以一行装开5个 li了
-- 复习点：我们用到清除浮动，因为 box-hd 里面的盒子个数不一定是多少，所以我们就不给高度了，但是里面的盒子浮动会影响下面的布局，因此需要清除浮动。
+- 用到清除浮动，因为 box-hd 里面的盒子个数不一定是多少，所以我们就不给高度了，但是里面的盒子浮动会影响下面的布局，因此需要清除浮动。
 
 ####  5、底部模块制作
 
 结构图如下：
 
-![image-20220816213604161](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208162136148.png)
+![image-20220819164935798](https://could-img.oss-cn-hangzhou.aliyuncs.com/202208191649882.png)
 
 - 1号盒子通栏大盒子 底部 **footer**  给高度  底色是白色
 
