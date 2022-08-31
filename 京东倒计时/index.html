@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js倒计时</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .seckill-countdown{
+            display: block;
+            margin: 0 auto;
+            width: 190px;
+            height: 260px;
+            color: #fff;
+            background-color: #e83632;
+            background-image: url(./images/a.png);
+        }
+        .seckill-countdown .countdown-title{
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            padding-top: 31px;
+        }
+        .seckill-countdown .countdown-desc{
+            margin-top: 90px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .seckill-countdown .countdown-desc strong{
+            font-size: 18px;
+            padding-right: 2px;
+            vertical-align: middle;
+            display: inline-block;
+            margin-top: -1px;
+
+        }
+        .seckill-countdown .countdown-main{
+            margin-left: auto;
+            margin-right: auto;
+            width: 130px;
+            height: 30px;
+            margin-top: 10px;
+            display: block;
+        }
+        .seckill-countdown .countdown-main span {
+            position: relative;
+            float: left;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background-color: #2f3430;
+            margin-right: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        .seckill-countdown .countdown-main .timmer__unit--minute::after {
+            content: ":";
+            display: block;
+            position: absolute;
+            right: -20px;
+            font-weight: bolder;
+            font-size: 18px;
+            width: 20px;
+            height: 100%;
+            top: 0;
+        }
+        .seckill-countdown .countdown-main .timmer__unit--hours::after {
+            content: ":";
+            display: block;
+            position: absolute;
+            right: -20px;
+            font-weight: bolder;
+            font-size: 18px;
+            width: 20px;
+            height: 100%;
+            top: 0;
+        }
+        
+        .seckill-countdown .countdown-main .timmer__unit--second {
+            margin-right: 0;
+        }
+    </style>
+</head>
+ 
+<body>
+    <a class="seckill-countdown">
+        <div class="countdown-title">京东 11.11</div>
+        <div>
+            <div class="countdown-desc">
+                <span>距开始还有</span>
+                <strong class="timmer__unit--day"></strong>
+                <span>天</span>
+            </div>
+            <span class="countdown-main">
+                <span class="timmer__unit--hours"></span>
+                <span class="timmer__unit--minute"></span>
+                <span class="timmer__unit--second"></span>
+            </span>
+            
+        </div>
+    </a>
+    <script>
+        var hours = document.querySelector('.timmer__unit--hours')
+        var min = document.querySelector('.timmer__unit--minute')
+        var second = document.querySelector('.timmer__unit--second')
+         var tian = document.querySelector('.timmer__unit--day')
+        var now = +new Date('2022-11-11 00:00:00'); //返回用户输入时间总毫秒数
+       
+        getDaojishi(); // 我们先调用一次这个函数，防止第一次刷新页面有空白
+        //  开启定时器
+        setInterval(getDaojishi, 1000)
+ 
+        function getDaojishi(time) {
+            var date = +new Date(); //返回当前时间总毫秒数
+           
+            var times = (now-date) / 1000; //剩余时间总秒数
+            var t = parseInt(times / 60 / 60 / 24); //天
+            t = t < 10 ? '0' + t : t;
+            tian.innerHTML=t
+            var h = parseInt(times / 60 / 60 % 24); //小时
+            h = h < 10 ? '0' + h : h;
+            hours.innerHTML = h;
+            var m = parseInt(times / 60 % 60); //分钟
+            m = m < 10 ? '0' + m : m;
+            min.innerHTML = m;
+            var s = parseInt(times % 60); //秒
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s;
+            // return t + '天' + h + '小时' + m + '分钟' + s + '秒'
+        }
+    </script>
+</body>
+ 
+</html>
